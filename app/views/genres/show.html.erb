@@ -1,15 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Actors in This Genre</strong>
+
+ <b>Actor's Movies:</b>
+
  
   <ul>
-    <li><% @genre.actors.each do |actor| %></li>
-    <li><%= @actor.name %></li>
+
+   <% @movies.actors.each do |movies| %>
+
+   <li><%= movies.name %></li>
+
    <% end %>
-  </ul>
-  
-  
+
+ </ul>
+
 </p>
 
 <%= link_to 'Edit', edit_genre_path(@genre) %> |

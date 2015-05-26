@@ -1,19 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @actor.name %>
+
+ <b>Actor's Genre:</b>
+
+ 
+  <ul>
+
+   <% @actor.movies.each do |movies| %>
+
+   <li><%= movies.name %></li>
+
+   <% end %>
+
+ </ul>
+
+</p>
 </p>
 
-<p>
-  <strong>Bio:</strong>
-  <%= @actor.bio %>
-</p>
-
-<p>
-  <strong>Genre:</strong>
-  <%= @actor.genre.name %>
-</p>
 
 <%= link_to 'Edit', edit_actor_path(@actor) %> |
 <%= link_to 'Back', actors_path %>
