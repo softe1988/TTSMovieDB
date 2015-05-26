@@ -2,20 +2,22 @@
 
 <p>
 
- <b>Actor's Movies:</b>
+ <b>Actors in this Genre:</b>
 
  
   <ul>
 
-   <% @movies.actors.each do |movies| %>
+   <% @genre.actors.each do |actor| %>
 
-   <li><%= movies.name %></li>
+   <li><%= actor.name %></li>
 
    <% end %>
 
  </ul>
 
 </p>
+
+
 
 <%= link_to 'Edit', edit_genre_path(@genre) %> |
 <%= link_to 'Back', genres_path %>
